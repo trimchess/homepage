@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* Style specific styles */
+
+body {
+	color: #cc5500;
+	background: #000;
+}
+
+a:link, a:visited {
+	color: #ffaf23;
+}
+
+a:active, a:hover {
+	color: #fff;
+}
+
+img.button, .thumb-container {
+	border: 1px #cc5500 dashed;
+}
+
+h2, #comment {
+	color: #c4c4c4;
+}
+
+.border, .box {
+	border: 1px #cc5500 solid;
+}
+
+.selected {
+	background: #ffaf23;
+}
+
+#comment {
+	border-right: 1px #cc5500 solid;
+	border-left: 1px #cc5500 solid;
+	border-bottom: 1px #cc5500 solid;
+}

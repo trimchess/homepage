@@ -1,0 +1,86 @@
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+
+/* pgn header */
+.VH
+{ 
+	font-family:"Courier New", Arial;
+	font-style:normal;
+	text-decoration:normal;
+	font-weight:normal;
+	font-size:12pt;
+	color:#800000;
+}
+
+/* move comments */
+.VC
+{ 
+	font-family:"Courier New", Arial;
+	font-style:normal;
+	text-decoration:normal;
+	font-weight:normal;
+	font-size:12pt;
+	color:#800000;
+}
+
+/* moves */
+.V0
+{ 
+	font-family:"Courier New", Arial;
+	font-style:normal;
+	text-decoration:normal;
+	font-weight:bold;
+	font-size:12pt;
+	color:#000000;
+}
+
+/* 1. variation */
+.V1
+{ 
+	font-family:"Courier New", Arial;
+	font-style:normal;
+	text-decoration:normal;
+	font-weight:normal;
+	font-size:12pt;
+	color:#000000;
+}
+
+/* 2.-x. variation */
+.V2
+{ 
+	font-family:"Courier New", Arial;
+	font-style:normal;
+	text-decoration:normal;
+	font-weight:normal;
+	font-size:12pt;
+	color:#000000;
+}
+
+/* variation dialog */
+.vardialog
+{ 
+	background:#FFFFFF;
+
+	width:100px;
+	font-family:"Courier New", Arial;
+	font-style:normal;
+	text-decoration:normal;
+	font-weight:bold;
+	font-size:9pt;
+	color:#000000;
+}
+
+/* autoplay dialog */
+.autoplaydlg
+{ 
+	background:#FFFFFF;
+
+	width:35px;
+	font-family:Arial;
+	font-style:normal;
+	text-decoration:normal;
+	font-weight:normal;
+	font-size:9pt;
+	color:#000000;
+}

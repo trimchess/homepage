@@ -1,0 +1,347 @@
+<html>
+
+<head>
+<link rel=stylesheet type="text/css" href="2008_r1.css">
+<script LANGUAGE="JavaScript1.1">
+<!--
+if(top.frames.length==0)location.replace("2008_r1.htm");
+
+	var x="x";
+	var goback=-1;
+	var goahead=-2;
+	var idx=0;
+	var bidx=0;
+	var lastidx=new Array(0, 0);
+	var lastcolor="#000000";
+	var movebgcol="#F8E1B8";
+	var movecol="#071E47";
+	var bgcolor="#ECECEC";
+	var maxvar=0;
+	var engl=0;
+	var nbgames = 7;
+	var diagram=parent.dia;
+	var timer=null;
+	var dummy2=0;
+	var dummy3=0;
+
+	zg=new Array(
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1026","5742","0118","6245","1119","5143","1422","5830","0514","4227","1449PAA","5657","4914","5741","0238","4109pAA","0324","3051","3845NAA",
+"5945bAA","1833","2710","0403","1000rAA","3350PAA","6052","5035","5244","1423","4537","2337QAA","4437bAA","2451BAA","3746","5130","4647","3023","4746","0302","0957",
+"2330","4647","0621","5446","3038","4754","2131","5760","3137","5462","3545"
+,
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1228","6245","0621","6134","0533","4528pAA","0312","2845","1119","60626361","04060705","5042","0238","4233bAA","0118","5742","1835","3452","3845NAA",
+"5245bAA","0503","5143","0917","5844","3518","3628","1928PAA","4518nAA","0002","4430","0319","4227","0203","2712qAA","0605","3021nAA","1421BAA","5931","2129","1229pAA",
+"1922","3115pAA","2206","2923","0607","1513pAA"
+,
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1228","6245","0118","6134","1523","5742","0526","5952","0621","5143","1119","5844","0917","60585659","0209","5251","0311","4335","2835PAA",
+"4535pAA","1833","4840","1927","3628","2138","5547","3828PAA","4033nAA","2834BAA","5143","2633PAA","4225","0916","5042","3312","2540","3424","4316bAA","1230","6360",
+"04060705","4430bAA","2330BAA","1643","1119","3525","1937","5951","3732","2510pAA","0002","1025","0226","2508pAA","2441","5857","4151RAA","4351nAA","3208NAA","5130pAA","2735",
+"3058"
+,
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1228","6247","0118","4941","0621","5740","0526","5849","04060705","6134","1127","3427pAA","2127BAA","3627nAA","0327PAA","4730","2754PAA","6052","5430NAA",
+"6362","3031","5261","3155PAA","6254","0247","6152","5554RAA","4942","4729","4034","5453PAA"
+,
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1119","6245","0211","5135","0116","6143","1220","5830","0312","3012qAA","0412BAA","5742","0623","4325","1601","2511bAA","0111BAA","3527","1117",
+"2720pAA","1220PAA","4227","1727NAA","5927nAA","2011","2709pAA","0004","60585659","0412","0925","1102","2534","1211","3628","1928PAA","5911rAA","0211RAA","4528pAA","1112","3410pAA",
+"1220","6360","0519","2813pAA","2021","1019bAA","2129","1307rAA","1422","1905","2930","6028","3038","0523nAA","0816","5547"
+,
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1228","6245","0118","5742","0621","5143","0533","5851","04060705","4335","2835PAA","4535pAA","1835NAA","6134","0504","5345","1119","4225","1026",
+"2535nAA","2635NAA","5133bAA","0220","3443","0317","5951","1710","60585659","0824","3340","0008","3628","1928PAA","5130","1523","3039","1430","3936","2136QAA","4336nAA",
+"1034","4941","3410","5539","1321","3930pAA","2130PAA","6323pAA","0412","5963","0800","2307","0613","0700rAA","1204","6315","1321","1510qAA","2029","0004rAA","2902",
+"0405"
+,
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5135","1127","5034","2734PAA","5236","1523","5742","0211","6245","1220","6134pAA","1329","3629pAA","2029PAA","60626361","0118","6160","0512","5837","1430",
+"4530pAA","2330NAA","3730pAA","0621","3021nAA","0705","5931","0513","3113rAA"
+	);
+
+	br=new Array(
+	new Array(
+	x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+	)
+	);
+//-->
+</script>
+
+<script SRC="../shared/chess1.js" LANGUAGE="JavaScript1.1"></script>
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+function doinit() {
+if (diagram == null) diagram = parent.dia;
+if (diagram != null) {
+if ((diagram.dummy1 != null) && (diagram.dummy1 == 1)){
+dummy2=1;
+if(timer!=null){
+clearTimeout(timer);
+timer=null;}
+init();
+var san="0";
+var sanb="0";
+if (parent!=null)
+san=parent.location.href;
+var ian;
+ian=san.lastIndexOf('?');
+if (ian!=-1) {
+san=san.substring(ian+1, san.length);
+ian=san.lastIndexOf('_');
+if ((ian!=-1)&&(diagram.jumpdone!=null)&&(diagram.jumpdone<2)){
+diagram.jumpdone++;
+sanb=san.substring(0,ian);
+san=san.substring(ian+1,san.length);
+san++;san--;sanb++;
+if(diagram.jumpdone==1){
+if((sanb>1)&&(diagram.document.moves0!=null)&&(diagram.document.moves0.database!=null))
+diagram.gotopage(sanb,1);
+else if((sanb==1)&&(san>0)){
+diagram.jumpdone=2;
+c(0,san);}}
+else if(diagram.jumpdone==2){
+if(san>0)
+c(0,san);}}}
+return;}}
+timer=setTimeout("doinit()", 50)}
+
+//-->
+</script>
+
+</head>
+
+<body ONLOAD="doinit()" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#000000" BGCOLOR="#ECECEC" ONKEYDOWN="handleKey(window.event.keyCode)">
+<p>
+<font COLOR="#000000">
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+document.write("<table BORDER=0><tr><td>")
+//-->
+</script>
+<span class="VH"><span class="hPlayers">Tonini, Pascal - Angst, Jesse</span><span class="hEvent"><br>
+Junioren-VM 1.Runde (Oberbuchsiten), 30.01.2008</span><span class="hAnnot"><br>
+[Schenker,Roberto]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">159MB, Fritz11.ctg, NBRS06<br></span>  <a href="javascript:c(0,1)" ID="l1">1.e4</a>
+ <a href="javascript:c(0,2)" ID="l2">c5</a> <a href="javascript:c(0,3)" ID="l3">2.Sc3</a> <a href="javascript:c(0,4)" ID="l4">Sc6</a>
+ <a href="javascript:c(0,5)" ID="l5">3.Sf3</a> <a href="javascript:c(0,6)" ID="l6">d6</a> <a href="javascript:c(0,7)" ID="l7">4.d3</a>
+ <a href="javascript:c(0,8)" ID="l8">g6</a> <a href="javascript:c(0,9)" ID="l9">5.Lg5</a> <a href="javascript:c(0,10)" ID="l10">Lg7</a>
+ <a href="javascript:c(0,11)" ID="l11">6.Sd5</a> <a href="javascript:c(0,12)" ID="l12">Lxb2</a> <a href="javascript:c(0,13)" ID="l13">7.Tb1</a>
+ <a href="javascript:c(0,14)" ID="l14">Lg7</a> <a href="javascript:c(0,15)" ID="l15">8.Tb3</a> <a href="javascript:c(0,16)" ID="l16">Lg4</a>
+ <a href="javascript:c(0,17)" ID="l17">9.Txb7</a> <a href="javascript:c(0,18)" ID="l18">Da5+?</a> <a href="javascript:c(0,19)" ID="l19">10.Ld2<img SRC="../shared/infplusminusbold.gif" HEIGHT=13 WIDTH=16 BORDER=0 ALIGN=bottom ALT="+ -"></a>
+ <a href="javascript:c(0,20)" ID="l20">Lxf3</a> <a href="javascript:c(0,21)" ID="l21">11.Dxf3</a> <a href="javascript:c(0,22)" ID="l22">Sb4</a>
+ <a href="javascript:c(0,23)" ID="l23">12.Sc7+</a> <a href="javascript:c(0,24)" ID="l24">Kd8</a> <a href="javascript:c(0,25)" ID="l25">13.Sxa8</a>
+ <a href="javascript:c(0,26)" ID="l26">Sxc2+</a> <a href="javascript:c(0,27)" ID="l27">14.Ke2</a> <a href="javascript:c(0,28)" ID="l28">Sd4+</a>
+ <a href="javascript:c(0,29)" ID="l29">15.Ke3</a> <a href="javascript:c(0,30)" ID="l30">Lh6+</a> <a href="javascript:c(0,31)" ID="l31">16.Df4</a>
+ <a href="javascript:c(0,32)" ID="l32">Lxf4+</a> <a href="javascript:c(0,33)" ID="l33">17.Kxf4</a>
+ <a href="javascript:c(0,34)" ID="l34">Dxd2+</a> <a href="javascript:c(0,35)" ID="l35">18.Kg3</a> <a href="javascript:c(0,36)" ID="l36">Dg5+</a>
+ <a href="javascript:c(0,37)" ID="l37">19.Kh3</a> <a href="javascript:c(0,38)" ID="l38">Dh6+</a> <a href="javascript:c(0,39)" ID="l39">20.Kg3</a>
+ <a href="javascript:c(0,40)" ID="l40">Kc8</a> <a href="javascript:c(0,41)" ID="l41">21.Tb1</a> <a href="javascript:c(0,42)" ID="l42">Dg5+</a>
+ <a href="javascript:c(0,43)" ID="l43">22.Kh3</a> <a href="javascript:c(0,44)" ID="l44">Sf6</a> <a href="javascript:c(0,45)" ID="l45">23.g3</a>
+ <a href="javascript:c(0,46)" ID="l46">Dg4+</a> <a href="javascript:c(0,47)" ID="l47">24.Kg2</a> <a href="javascript:c(0,48)" ID="l48">Sh5</a>
+ <a href="javascript:c(0,49)" ID="l49">25.Te1</a> <a href="javascript:c(0,50)" ID="l50">Sf4+</a> <a href="javascript:c(0,51)" ID="l51">26.Kg1</a>
+ <a href="javascript:c(0,52)" ID="l52">Sf3#</a> 
+</span><br><br><span class="VH">0-1</span></td></tr>
+</table>
+<br>
+<span class="VH"><span class="hPlayers">Angst, Robin - Christ, Kim</span><span class="hEvent"><br>
+Junioren-VM 1.Runde (Oberbuchsiten), 30.01.2008</span><span class="hAnnot"><br>
+[Schenker,Roberto]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">159MB, Fritz11.ctg, NBRS06<br></span>  <a href="javascript:c(0,54)" ID="l54">1.e4</a>
+ <a href="javascript:c(0,55)" ID="l55">e5</a> <a href="javascript:c(0,56)" ID="l56">2.Sf3</a> <a href="javascript:c(0,57)" ID="l57">Sf6</a>
+ <a href="javascript:c(0,58)" ID="l58">3.Lc4</a> <a href="javascript:c(0,59)" ID="l59">Lb4</a> <a href="javascript:c(0,60)" ID="l60">4.Sxe5</a>
+ <a href="javascript:c(0,61)" ID="l61">De7</a> <a href="javascript:c(0,62)" ID="l62">5.Sf3</a> <a href="javascript:c(0,63)" ID="l63">d6</a>
+ <a href="javascript:c(0,64)" ID="l64">6.<nobr>O-O</nobr></a> <a href="javascript:c(0,65)" ID="l65"><nobr>O-O</nobr></a> <a href="javascript:c(0,66)" ID="l66">7.c3</a>
+ <a href="javascript:c(0,67)" ID="l67">Lg4</a> <a href="javascript:c(0,68)" ID="l68">8.cxb4</a> <a href="javascript:c(0,69)" ID="l69">Sc6</a>
+ <a href="javascript:c(0,70)" ID="l70">9.Sc3</a> <a href="javascript:c(0,71)" ID="l71">Sd4</a> <a href="javascript:c(0,72)" ID="l72">10.Le2</a>
+ <a href="javascript:c(0,73)" ID="l73">Lxf3</a> <a href="javascript:c(0,74)" ID="l74">11.Lxf3</a> <a href="javascript:c(0,75)" ID="l75">Tfd8</a>
+ <a href="javascript:c(0,76)" ID="l76">12.d3</a> <a href="javascript:c(0,77)" ID="l77">b6</a> <a href="javascript:c(0,78)" ID="l78">13.Le3</a>
+ <a href="javascript:c(0,79)" ID="l79">Sc6</a> <a href="javascript:c(0,80)" ID="l80">14.e5</a> <a href="javascript:c(0,81)" ID="l81">dxe5</a>
+ <a href="javascript:c(0,82)" ID="l82">15.Lxc6</a> <a href="javascript:c(0,83)" ID="l83">Tac8</a> <a href="javascript:c(0,84)" ID="l84">16.Lg5</a>
+ <a href="javascript:c(0,85)" ID="l85">Td6</a> <a href="javascript:c(0,86)" ID="l86">17.Sd5</a> <a href="javascript:c(0,87)" ID="l87">Tcd8</a>
+ <a href="javascript:c(0,88)" ID="l88">18.Sxe7+</a> <a href="javascript:c(0,89)" ID="l89">Kf8</a> <a href="javascript:c(0,90)" ID="l90">19.Lxf6</a>
+ <a href="javascript:c(0,91)" ID="l91">gxf6</a> <a href="javascript:c(0,92)" ID="l92">20.Dh5</a> <a href="javascript:c(0,93)" ID="l93">f5</a>
+ <a href="javascript:c(0,94)" ID="l94">21.Sxf5</a> <a href="javascript:c(0,95)" ID="l95">Tg6</a> <a href="javascript:c(0,96)" ID="l96">22.Dxh7</a>
+ <a href="javascript:c(0,97)" ID="l97">Tg8</a> <a href="javascript:c(0,98)" ID="l98">23.Sh6</a> <a href="javascript:c(0,99)" ID="l99">Th8</a>
+ <a href="javascript:c(0,100)" ID="l100">24.Dxf7#</a> 
+</span><br><br><span class="VH">1-0</span></td></tr>
+</table>
+<br>
+<span class="VH"><span class="hPlayers">Bolick, Julian - Gebhart, Mathias</span><span class="hEvent"><br>
+Junioren-VM 1. Runde (Oberbuchsiten), 30.01.2008</span><span class="hAnnot"><br>
+[Schenker,Roberto]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">159MB, Fritz11.ctg, NBRS06<br></span>  <a href="javascript:c(0,102)" ID="l102">1.e4</a>
+ <a href="javascript:c(0,103)" ID="l103">e5</a> <a href="javascript:c(0,104)" ID="l104">2.Sf3</a> <a href="javascript:c(0,105)" ID="l105">Sc6</a>
+ <a href="javascript:c(0,106)" ID="l106">3.Lc4</a> <a href="javascript:c(0,107)" ID="l107">h6</a> <a href="javascript:c(0,108)" ID="l108">4.Sc3</a>
+ <a href="javascript:c(0,109)" ID="l109">Lc5</a> <a href="javascript:c(0,110)" ID="l110">5.De2</a>
+ <a href="javascript:c(0,111)" ID="l111">Sf6</a> <a href="javascript:c(0,112)" ID="l112">6.d3</a> <a href="javascript:c(0,113)" ID="l113">d6</a>
+ <a href="javascript:c(0,114)" ID="l114">7.Le3</a> <a href="javascript:c(0,115)" ID="l115">b6</a> <a href="javascript:c(0,116)" ID="l116">8.<nobr>O-O-O</nobr></a> <a href="javascript:c(0,117)" ID="l117">Lb7</a>
+ <a href="javascript:c(0,118)" ID="l118">9.Dd2</a> <a href="javascript:c(0,119)" ID="l119">Dd7</a>
+ <a href="javascript:c(0,120)" ID="l120">10.d4</a> <a href="javascript:c(0,121)" ID="l121">exd4</a>
+ <a href="javascript:c(0,122)" ID="l122">11.Sxd4</a> <a href="javascript:c(0,123)" ID="l123">Sb4</a>
+ <a href="javascript:c(0,124)" ID="l124">12.a3</a> <a href="javascript:c(0,125)" ID="l125">d5</a> <a href="javascript:c(0,126)" ID="l126">13.e5</a>
+ <a href="javascript:c(0,127)" ID="l127">Sg4</a> <a href="javascript:c(0,128)" ID="l128">14.h3</a>
+ <a href="javascript:c(0,129)" ID="l129">Sxe5</a> <a href="javascript:c(0,130)" ID="l130">15.axb4</a>
+ <a href="javascript:c(0,131)" ID="l131">Sxc4</a> <a href="javascript:c(0,132)" ID="l132">16.Dd3</a>
+ <a href="javascript:c(0,133)" ID="l133">Lxb4</a> <a href="javascript:c(0,134)" ID="l134">17.Scb5</a>
+ <a href="javascript:c(0,135)" ID="l135">La6</a> <a href="javascript:c(0,136)" ID="l136">18.c3</a>
+ <a href="javascript:c(0,137)" ID="l137">Le7</a> <a href="javascript:c(0,138)" ID="l138">19.Sa3</a>
+ <a href="javascript:c(0,139)" ID="l139">Sa5</a> <a href="javascript:c(0,140)" ID="l140">20.Dxa6</a>
+ <a href="javascript:c(0,141)" ID="l141">Lg5</a> <a href="javascript:c(0,142)" ID="l142">21.The1</a>
+ <a href="javascript:c(0,143)" ID="l143"><nobr>O-O</nobr></a> <a href="javascript:c(0,144)" ID="l144">22.Lxg5</a>
+ <a href="javascript:c(0,145)" ID="l145">hxg5</a> <a href="javascript:c(0,146)" ID="l146">23.Dd3</a>
+ <a href="javascript:c(0,147)" ID="l147">Dd6</a> <a href="javascript:c(0,148)" ID="l148">24.Sdb5</a>
+ <a href="javascript:c(0,149)" ID="l149">Df4+</a> <a href="javascript:c(0,150)" ID="l150">25.Td2</a>
+ <a href="javascript:c(0,151)" ID="l151">Da4</a> <a href="javascript:c(0,152)" ID="l152">26.Sxc7</a>
+ <a href="javascript:c(0,153)" ID="l153">Tac8</a> <a href="javascript:c(0,154)" ID="l154">27.Scb5</a>
+ <a href="javascript:c(0,155)" ID="l155">Tc5</a> <a href="javascript:c(0,156)" ID="l156">28.Sxa7</a>
+ <a href="javascript:c(0,157)" ID="l157">Sb3+</a> <a href="javascript:c(0,158)" ID="l158">29.Kb1</a>
+ <a href="javascript:c(0,159)" ID="l159">Sxd2+</a> <a href="javascript:c(0,160)" ID="l160">30.Dxd2</a>
+ <a href="javascript:c(0,161)" ID="l161">Dxa7</a> <a href="javascript:c(0,162)" ID="l162">31.Dxg5</a>
+ <a href="javascript:c(0,163)" ID="l163">d4</a> <a href="javascript:c(0,164)" ID="l164">32.Dc1</a> <span class="VC">Zeit</span> 
+</span><br><br><span class="VH">1-0</span></td></tr>
+</table>
+<br>
+<span class="VH"><span class="hPlayers">Karkelle, Bilal - Restelli, Sarah</span><span class="hEvent"><br>
+Junioren-VM 1.Runde (Oberbuchsiten), 30.01.2008</span><span class="hAnnot"><br>
+[Schenker,Roberto]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">159MB, Fritz11.ctg, NBRS06<br></span>  <a href="javascript:c(0,166)" ID="l166">1.e4</a>
+ <a href="javascript:c(0,167)" ID="l167">e5</a> <a href="javascript:c(0,168)" ID="l168">2.Sh3</a> <a href="javascript:c(0,169)" ID="l169">Sc6</a>
+ <a href="javascript:c(0,170)" ID="l170">3.b3</a> <a href="javascript:c(0,171)" ID="l171">Sf6</a> <a href="javascript:c(0,172)" ID="l172">4.Sa3</a>
+ <a href="javascript:c(0,173)" ID="l173">Lc5</a> <a href="javascript:c(0,174)" ID="l174">5.Lb2</a>
+ <a href="javascript:c(0,175)" ID="l175"><nobr>O-O</nobr></a> <a href="javascript:c(0,176)" ID="l176">6.Lc4</a>
+ <a href="javascript:c(0,177)" ID="l177">d5</a> <a href="javascript:c(0,178)" ID="l178">7.Lxd5</a>
+ <a href="javascript:c(0,179)" ID="l179">Sxd5</a> <a href="javascript:c(0,180)" ID="l180">8.exd5</a>
+ <a href="javascript:c(0,181)" ID="l181">Dxd5</a> <a href="javascript:c(0,182)" ID="l182">9.Sg5</a>
+ <a href="javascript:c(0,183)" ID="l183">Dxg2</a> <a href="javascript:c(0,184)" ID="l184">10.Ke2</a>
+ <a href="javascript:c(0,185)" ID="l185">Dxg5</a> <a href="javascript:c(0,186)" ID="l186">11.Tg1</a>
+ <a href="javascript:c(0,187)" ID="l187">Dh5+</a> <a href="javascript:c(0,188)" ID="l188">12.Kf1</a>
+ <a href="javascript:c(0,189)" ID="l189">Dxh2</a> <a href="javascript:c(0,190)" ID="l190">13.Tg2</a>
+ <a href="javascript:c(0,191)" ID="l191">Lh3</a> <a href="javascript:c(0,192)" ID="l192">14.Ke2</a>
+ <a href="javascript:c(0,193)" ID="l193">Dxg2</a> <a href="javascript:c(0,194)" ID="l194">15.Lc3</a>
+ <a href="javascript:c(0,195)" ID="l195">Lf5</a> <a href="javascript:c(0,196)" ID="l196">16.Sc4</a>
+ <a href="javascript:c(0,197)" ID="l197">Dxf2#</a> 
+</span><br><br><span class="VH">0-1</span></td></tr>
+</table>
+<br>
+<span class="VH"><span class="hPlayers">Restelli, Philipp - Harder, Sebastian</span><span class="hEvent"><br>
+Junioren-VM 1.Runde (Oberbuchsiten), 30.01.2008</span><span class="hAnnot"><br>
+[Schenker,Roberto]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">159MB, Fritz11.ctg, NBRS06<br></span>  <a href="javascript:c(0,199)" ID="l199">1.e4</a>
+ <a href="javascript:c(0,200)" ID="l200">d6</a> <a href="javascript:c(0,201)" ID="l201">2.Sf3</a> <a href="javascript:c(0,202)" ID="l202">Ld7</a>
+ <a href="javascript:c(0,203)" ID="l203">3.d4</a> <a href="javascript:c(0,204)" ID="l204">Sa6</a> <a href="javascript:c(0,205)" ID="l205">4.Ld3</a>
+ <a href="javascript:c(0,206)" ID="l206">e6</a> <a href="javascript:c(0,207)" ID="l207">5.Lg5</a> <a href="javascript:c(0,208)" ID="l208">De7</a>
+ <a href="javascript:c(0,209)" ID="l209">6.Lxe7</a> <a href="javascript:c(0,210)" ID="l210">Kxe7</a>
+ <a href="javascript:c(0,211)" ID="l211">7.Sc3</a> <a href="javascript:c(0,212)" ID="l212">Sh6</a>
+ <a href="javascript:c(0,213)" ID="l213">8.Lb5</a> <a href="javascript:c(0,214)" ID="l214">Sb8</a>
+ <a href="javascript:c(0,215)" ID="l215">9.Lxd7</a> <a href="javascript:c(0,216)" ID="l216">Sxd7</a>
+ <a href="javascript:c(0,217)" ID="l217">10.d5</a> <a href="javascript:c(0,218)" ID="l218">Sb6</a>
+ <a href="javascript:c(0,219)" ID="l219">11.dxe6</a> <a href="javascript:c(0,220)" ID="l220">Kxe6</a>
+ <a href="javascript:c(0,221)" ID="l221">12.Sd5</a> <a href="javascript:c(0,222)" ID="l222">Sxd5</a>
+ <a href="javascript:c(0,223)" ID="l223">13.Dxd5+</a> <a href="javascript:c(0,224)" ID="l224">Kd7</a>
+ <a href="javascript:c(0,225)" ID="l225">14.Dxb7</a> <a href="javascript:c(0,226)" ID="l226">Te8</a>
+ <a href="javascript:c(0,227)" ID="l227">15.<nobr>O-O-O</nobr></a> <a href="javascript:c(0,228)" ID="l228">Te7</a>
+ <a href="javascript:c(0,229)" ID="l229">16.Db5+</a> <a href="javascript:c(0,230)" ID="l230">Kc8</a>
+ <a href="javascript:c(0,231)" ID="l231">17.Dc4</a> <a href="javascript:c(0,232)" ID="l232">Td7</a>
+ <a href="javascript:c(0,233)" ID="l233">18.e5</a> <a href="javascript:c(0,234)" ID="l234">dxe5</a>
+ <a href="javascript:c(0,235)" ID="l235">19.Txd7</a> <a href="javascript:c(0,236)" ID="l236">Kxd7</a>
+ <a href="javascript:c(0,237)" ID="l237">20.Sxe5+</a> <a href="javascript:c(0,238)" ID="l238">Ke7</a>
+ <a href="javascript:c(0,239)" ID="l239">21.Dxc7+</a> <a href="javascript:c(0,240)" ID="l240">Ke6</a>
+ <a href="javascript:c(0,241)" ID="l241">22.Te1</a> <a href="javascript:c(0,242)" ID="l242">Ld6</a>
+ <a href="javascript:c(0,243)" ID="l243">23.Sxf7+</a> <a href="javascript:c(0,244)" ID="l244">Kf6</a>
+ <a href="javascript:c(0,245)" ID="l245">24.Dxd6+</a> <a href="javascript:c(0,246)" ID="l246">Kf5</a>
+ <a href="javascript:c(0,247)" ID="l247">25.Sxh8</a> <a href="javascript:c(0,248)" ID="l248">g6</a>
+ <a href="javascript:c(0,249)" ID="l249">26.Df8+</a> <a href="javascript:c(0,250)" ID="l250">Kg5</a>
+ <a href="javascript:c(0,251)" ID="l251">27.Te5+</a> <a href="javascript:c(0,252)" ID="l252">Kg4</a>
+ <a href="javascript:c(0,253)" ID="l253">28.Dxh6</a> <a href="javascript:c(0,254)" ID="l254">a6</a>
+ <a href="javascript:c(0,255)" ID="l255">29.h3#</a> 
+</span><br><br><span class="VH">1-0</span></td></tr>
+</table>
+<br>
+<span class="VH"><span class="hPlayers">Roth, Yves - von Arx, Joel</span><span class="hEvent"><br>
+Junioren-VM 1.Runde (Oberbuchsiten), 30.01.2008</span><span class="hAnnot"><br>
+[Schenker,Roberto]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">159MB, Fritz11.ctg, NBRS06<br></span>  <a href="javascript:c(0,257)" ID="l257">1.e4</a>
+ <a href="javascript:c(0,258)" ID="l258">e5</a> <a href="javascript:c(0,259)" ID="l259">2.Sf3</a> <a href="javascript:c(0,260)" ID="l260">Sc6</a>
+ <a href="javascript:c(0,261)" ID="l261">3.Sc3</a> <a href="javascript:c(0,262)" ID="l262">Sf6</a>
+ <a href="javascript:c(0,263)" ID="l263">4.d3</a> <a href="javascript:c(0,264)" ID="l264">Lb4</a> <a href="javascript:c(0,265)" ID="l265">5.Ld2</a>
+ <a href="javascript:c(0,266)" ID="l266"><nobr>O-O</nobr></a> <a href="javascript:c(0,267)" ID="l267">6.d4</a>
+ <a href="javascript:c(0,268)" ID="l268">exd4</a> <a href="javascript:c(0,269)" ID="l269">7.Sxd4</a>
+ <a href="javascript:c(0,270)" ID="l270">Sxd4</a> <a href="javascript:c(0,271)" ID="l271">8.Lc4</a>
+ <a href="javascript:c(0,272)" ID="l272">Te8</a> <a href="javascript:c(0,273)" ID="l273">9.f3</a> <a href="javascript:c(0,274)" ID="l274">d6</a>
+ <a href="javascript:c(0,275)" ID="l275">10.Sb5</a> <a href="javascript:c(0,276)" ID="l276">c5</a>
+ <a href="javascript:c(0,277)" ID="l277">11.Sxd4</a> <a href="javascript:c(0,278)" ID="l278">cxd4</a>
+ <a href="javascript:c(0,279)" ID="l279">12.Lxb4</a> <a href="javascript:c(0,280)" ID="l280">Le6</a>
+ <a href="javascript:c(0,281)" ID="l281">13.Ld3</a> <a href="javascript:c(0,282)" ID="l282">Db6</a>
+ <a href="javascript:c(0,283)" ID="l283">14.Dd2</a> <a href="javascript:c(0,284)" ID="l284">Dc7</a>
+ <a href="javascript:c(0,285)" ID="l285">15.<nobr>O-O-O</nobr></a> <a href="javascript:c(0,286)" ID="l286">a5</a>
+ <a href="javascript:c(0,287)" ID="l287">16.La3</a> <a href="javascript:c(0,288)" ID="l288">Ta7</a>
+ <a href="javascript:c(0,289)" ID="l289">17.e5</a> <a href="javascript:c(0,290)" ID="l290">dxe5</a>
+ <a href="javascript:c(0,291)" ID="l291">18.Dg5</a> <a href="javascript:c(0,292)" ID="l292">h6</a>
+ <a href="javascript:c(0,293)" ID="l293">19.Dh4</a> <a href="javascript:c(0,294)" ID="l294">g5</a>
+ <a href="javascript:c(0,295)" ID="l295">20.De4</a> <a href="javascript:c(0,296)" ID="l296">Sxe4</a>
+ <a href="javascript:c(0,297)" ID="l297">21.Lxe4</a> <a href="javascript:c(0,298)" ID="l298">Dc4</a>
+ <a href="javascript:c(0,299)" ID="l299">22.b3</a> <a href="javascript:c(0,300)" ID="l300">Dc7</a>
+ <a href="javascript:c(0,301)" ID="l301">23.h4</a> <a href="javascript:c(0,302)" ID="l302">f6</a> <a href="javascript:c(0,303)" ID="l303">24.hxg5</a>
+ <a href="javascript:c(0,304)" ID="l304">fxg5</a> <a href="javascript:c(0,305)" ID="l305">25.Txh6</a>
+ <a href="javascript:c(0,306)" ID="l306">Te7</a> <a href="javascript:c(0,307)" ID="l307">26.Tdh1</a>
+ <a href="javascript:c(0,308)" ID="l308">Ta8</a> <a href="javascript:c(0,309)" ID="l309">27.Th8+</a>
+ <a href="javascript:c(0,310)" ID="l310">Kf7</a> <a href="javascript:c(0,311)" ID="l311">28.Txa8</a>
+ <a href="javascript:c(0,312)" ID="l312">Te8</a> <a href="javascript:c(0,313)" ID="l313">29.Th7+</a>
+ <a href="javascript:c(0,314)" ID="l314">Kf6</a> <a href="javascript:c(0,315)" ID="l315">30.Txc7</a>
+ <a href="javascript:c(0,316)" ID="l316">Lf5</a> <a href="javascript:c(0,317)" ID="l317">31.Txe8</a>
+ <a href="javascript:c(0,318)" ID="l318">Lc8</a> <a href="javascript:c(0,319)" ID="l319">32.Tf8+</a> 
+</span><br><br><span class="VH">1-0</span></td></tr>
+</table>
+<br>
+<span class="VH"><span class="hPlayers">Siegenthaler, Christian - Tonini, Elias</span><span class="hEvent"><br>
+Junioren-VM 1.Runde (Olten), 17.02.2008</span><span class="hAnnot"><br>
+[Schenker,Roberto]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">159MB, Fritz11.ctg, NBRS06<br></span>  <a href="javascript:c(0,321)" ID="l321">1.d4</a>
+ <a href="javascript:c(0,322)" ID="l322">d5</a> <a href="javascript:c(0,323)" ID="l323">2.c4</a> <a href="javascript:c(0,324)" ID="l324">dxc4</a>
+ <a href="javascript:c(0,325)" ID="l325">3.e4</a> <a href="javascript:c(0,326)" ID="l326">h6</a> <a href="javascript:c(0,327)" ID="l327">4.Sc3</a>
+ <a href="javascript:c(0,328)" ID="l328">Ld7</a> <a href="javascript:c(0,329)" ID="l329">5.Sf3</a>
+ <a href="javascript:c(0,330)" ID="l330">e6</a> <a href="javascript:c(0,331)" ID="l331">6.Lxc4</a>
+ <a href="javascript:c(0,332)" ID="l332">f5</a> <a href="javascript:c(0,333)" ID="l333">7.exf5</a>
+ <a href="javascript:c(0,334)" ID="l334">exf5</a> <a href="javascript:c(0,335)" ID="l335">8.<nobr>O-O</nobr></a> <a href="javascript:c(0,336)" ID="l336">Sc6</a>
+ <a href="javascript:c(0,337)" ID="l337">9.Te1+</a> <a href="javascript:c(0,338)" ID="l338">Le7</a>
+ <a href="javascript:c(0,339)" ID="l339">10.Lf4</a> <a href="javascript:c(0,340)" ID="l340">g5</a>
+ <a href="javascript:c(0,341)" ID="l341">11.Sxg5</a> <a href="javascript:c(0,342)" ID="l342">hxg5</a>
+ <a href="javascript:c(0,343)" ID="l343">12.Lxg5</a> <a href="javascript:c(0,344)" ID="l344">Sf6</a>
+ <a href="javascript:c(0,345)" ID="l345">13.Lxf6</a> <a href="javascript:c(0,346)" ID="l346">Tf8</a>
+ <a href="javascript:c(0,347)" ID="l347">14.Dh5+</a> <a href="javascript:c(0,348)" ID="l348">Tf7</a>
+ <a href="javascript:c(0,349)" ID="l349">15.Dxf7#</a> 
+</span><br><br><span class="VH">1-0</span></td></tr>
+</table>
+</td></tr></table>
+
+</font>
+</p>
+
+<font size=-2><a href="http://www.mailchess.de/pgntojs.html" target=_blank>Erstellt mit PGNtoJS</a></font>
+</body>
+</html>

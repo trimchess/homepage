@@ -1,0 +1,135 @@
+<html>
+
+<head>
+<meta name="robots" content="noindex">
+<meta HTTP-EQUIV='imagetoolbar' CONTENT='no'>
+
+<link rel=stylesheet type="text/css" href="cs2013.css">
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+if(top.frames.length==0)location.replace("cs2013.htm");
+
+	window.status = "Loading pieces...";
+	var bwk      = new Image();
+	bwk.src  = "fwk32.gif";
+	var bwd      = new Image();
+	bwd.src  = "fwd32.gif";
+	var bwt      = new Image();
+	bwt.src  = "fwt32.gif";
+	var bwl      = new Image();
+	bwl.src  = "fwl32.gif";
+	var bws      = new Image();
+	bws.src  = "fws32.gif";
+	var bwb      = new Image();
+	bwb.src  = "fwb32.gif";
+	var bsk      = new Image();
+	bsk.src  = "fsk32.gif";
+	var bsd      = new Image();
+	bsd.src  = "fsd32.gif";
+	var bst      = new Image();
+	bst.src  = "fst32.gif";
+	var bsl      = new Image();
+	bsl.src  = "fsl32.gif";
+	var bss      = new Image();
+	bss.src  = "fss32.gif";
+	var bsb      = new Image();
+	bsb.src  = "fsb32.gif";
+	var bleer    = new Image();
+	bleer.src= "fleer.gif";
+	idxkorr = new Array(0, 0);
+	rotated = new Array(0, 0);
+	dummy1=0;
+	ldd=0;
+	ptjv=323;
+	fst=1;
+	jumpdone=0;
+	var htmname = "cs2013_game1.htm";
+
+function handleKey(ik) {
+if(parent.game==null)return;
+parent.game.handleKey(ik);}
+
+function domove(v, w){
+if((parent.game!=null)&&(parent.game.dummy2!=null)&&(parent.game.dummy2==1)){parent.game.c(v, w)}}
+
+function initdia(){
+if (dummy1 == 1) return;
+window.status = "Init. diagrams...";
+j=0;
+	for(i=0;i<document.images.length;i++){
+		if((document.images[i].name!=null)&&(document.images[i].name.charAt(0)=="D")){
+			idxkorr[j]=i;
+			j++;}}
+dummy1 = 1;
+while(!parent.game){};
+parent.game.location.href="cs2013_game1.htm";
+window.status = "";}
+
+//-->
+</script>
+</head>
+
+<body ONLOAD="initdia()" BGCOLOR="#ECECEC" ONKEYDOWN="handleKey(window.event.keyCode)">
+<noscript>&nbsp;
+Sorry, your browser doesn't support JavaScript.
+</noscript>
+
+<center>
+<noscript><center>
+<br><img src="noscriptfirstpos.jpg">
+<br><a href="cs2013_game1.htm" target="game">Please click to load the notation</a>.
+</center></noscript>
+<script LANGUAGE="JavaScript1.1">
+<!--
+	document.write("<table BORDER=0><tr><td>");
+	document.write("<table BORDER=1><tbody><tr><td>");
+			document.write("<table BORDER=0 CELLPADDING=0 CELLSPACING=0><tbody>");
+
+	ds = "#F8E1B8";
+	distart = "D0";
+	dz = "";
+	dsq = "";
+	var bilder = new Array("fwk32.gif","fwd32.gif","fwt32.gif","fwl32.gif","fws32.gif","fwb32.gif","fsk32.gif","fsd32.gif","fst32.gif","fsl32.gif","fss32.gif","fsb32.gif","fleer.gif","");
+	var firstpos = new Array(8,10,9,7,6,9,10,8,11,11,11,11,11,11,11,11,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,5,5,5,5,5,5,5,5,2,4,3,1,0,3,4,2,"");
+	for (i = 0; i < 8; i++) {
+		if (ds == "#F8E1B8") { dsq = ""; ds = "#AE823E" }
+		else { dsq = ""; ds = "#F8E1B8" };
+		for (j = 0; j < 8; j++) {
+			if (ds == "#F8E1B8") { dsq = ""; ds = "#AE823E" }
+			else { dsq = ""; ds = "#F8E1B8" };
+			if (dsq != "") { dz = "<td BACKGROUND=" + dsq + " BGCOLOR=" + ds + " >" }
+			else dz = "<td BGCOLOR=" + ds + ">";
+			dz = dz + "<img border=0 src=" + bilder[firstpos[i * 8 + j]] + " ";
+			if (distart != "") {dz = dz + "NAME=" + distart + " " };
+			distart = "";
+			dz = dz + "HEIGHT=32  WIDTH=32></TD>";
+			document.write(dz);
+		}
+		document.write("</TR>");
+	}
+	document.write("</tbody></table>");
+	document.write("</td></tr></tbody></table></td></tr><tr>");
+document.write("<td VALIGN='TOP'>");
+document.write("<center>");
+document.write("<form NAME='moves0'>");
+	document.write("<input TYPE='button' VALUE=' |&lt; ' ONCLICK='domove(0, -3)' ONDBLCLICK='domove(0, -3)'>");
+	document.write("<input TYPE='button' VALUE=' &lt;&lt; '  ONKEYPRESS='domove(0, -1)' ONCLICK='domove(0, -1)' ONDBLCLICK='domove(0, -1)'>");
+	document.write("<input TYPE='button' VALUE=' &gt;&gt; '  ONKEYPRESS='domove(0, -2)' ONCLICK='domove(0, -2)' ONDBLCLICK='domove(0, -2)'>");
+	document.write("<input TYPE='button' VALUE=' &gt;| ' ONCLICK='domove(0, -4)' ONDBLCLICK='domove(0, -4)'>");
+document.write(" ");
+
+document.write("</center>");
+//-->
+</script>
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+document.write("</form>");
+	document.write("</td></tr></table>");
+//-->
+</script>
+</center>
+
+</body>
+</html>

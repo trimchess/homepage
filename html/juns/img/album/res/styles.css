@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* Style specific styles */
+
+body {
+	color: #fff;
+	background: #8ebdb6;
+}
+
+a:link, a:visited {
+	color: #3e838C;
+}
+
+a:active, a:hover {
+	color: #063940;
+}
+
+img.button, .thumb-container {
+	border: 1px #063940 dashed;
+}
+
+h2, #comment {
+	color: #fff;
+}
+
+.border, .box {
+	border: 1px #063940 solid;
+}
+
+.selected {
+	background: #3e838C;
+}
+
+#header, #comment, #footer {
+	background: #195e63;
+}
+
+#comment {
+	border-right: 1px #063940 solid;
+	border-left: 1px #063940 solid;
+	border-bottom: 1px #063940 solid;
+}

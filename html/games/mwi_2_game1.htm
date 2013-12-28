@@ -1,0 +1,268 @@
+<html>
+
+<head>
+<link rel=stylesheet type="text/css" href="mwi_2.css">
+<script LANGUAGE="JavaScript1.1">
+<!--
+if(top.frames.length==0)location.replace("mwi_2.htm");
+
+	var x="x";
+	var goback=-1;
+	var goahead=-2;
+	var idx=0;
+	var bidx=0;
+	var lastidx=new Array(0, 0);
+	var lastcolor="#000000";
+	var movebgcol="#F8E1B8";
+	var movecol="#071E47";
+	var bgcolor="#ECECEC";
+	var maxvar=0;
+	var engl=0;
+	var nbgames = 1;
+	var diagram=parent.dia;
+	var timer=null;
+	var dummy2=0;
+	var dummy3=0;
+	if ((navigator.appName=="Netscape")&&(navigator.appVersion.substring(0,1) == "3"))
+	{idnet1=1}else{idnet1=0};
+
+	zg=new Array(
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1026","6245","0118","6125","1119","5135","2635PAA","4535pAA","0211","5042","0621","5751","1220","60626361","0512","6160","04060705","2543","b11 26 23 ",
+"0317","r2q1rk1/pp1bbppp/2nppn2/8/3NP3/2PB4/PP1N1PPP/R1BQR1K1 10 20","1828","4361","r4rk1/pp1bbppp/1qnppn2/8/3NP3/2PB4/PP1N1PPP/R1BQR1K1 11 21","w11 32 29 ","5145","r4rk1/pp1bbppp/1qnppn2/8/3NP3/2PB4/PP1N1PPP/R1BQR1K1 11 21","5134","1703","r4rk1/pp1bbppp/1qnppn2/8/3NP3/2PB1N2/PP3PPP/R1BQR1K1 11 27","b12 38 35 ","0002","r4rk1/pp1bbppp/1qnppn2/8/3NP3/2PB1N2/PP3PPP/R1BQR1K1 11 27","1828","4361","2r2rk1/pp1bbppp/1qnppn2/8/3NP3/2PB1N2/PP3PPP/R1BQR1K1 12 33","w12 46 41 ","5657","2r2rk1/pp1bbppp/1qnppn2/8/3NP3/2PB1N2/PP3PPP/R1BQR1K1 12 33","3518nAA",
+"1118NAA","4535","0816","2r2rk1/pp1bbppp/1qnppn2/8/3NP3/2PB1N2/PP3PPP/1RBQR1K1 12 39","1724","4840","b14 54 51 ","1523","2r2rk1/pp1bbppp/2nppn2/q7/3NP3/P1PB1N2/1P3PPP/1RBQR1K1 13 48","1828","5830","2r2rk1/pp1bbpp1/2nppn1p/q7/3NP3/P1PB1N2/1P3PPP/1RBQR1K1 14 49","w14 62 57 ","5851","2r2rk1/pp1bbpp1/2nppn1p/q7/3NP3/P1PB1N2/1P3PPP/1RBQR1K1 14 49","3518nAA","1118NAA","4535","1811","2r2rk1/pp1bbpp1/2nppn1p/q7/3NP3/P1PB1N2/1P1B1PPP/1R1QR1K1 14 55","b15 70 65 ",
+"0816","2r2rk1/pp1bbpp1/2nppn1p/q7/3NP3/P1PB1N2/1P1B1PPP/1R1QR1K1 14 55","1828","4234","2410","4361","2r2rk1/1p1bbpp1/p1nppn1p/q7/3NP3/P1PB1N2/1P1B1PPP/1R1QR1K1 15 63","w15 77 73 ","3541","2r2rk1/1p1bbpp1/p1nppn1p/q7/3NP3/P1PB1N2/1P1B1PPP/1R1QR1K1 15 63","3518nAA","1118NAA","4535","2r2rk1/1p1bbpp1/p1nppn1p/q7/4P3/PNPB1N2/1P1B1PPP/1R1QR1K1 15 71","2410","5547","b17 87 82 ","0925","2r2rk1/1pqbbpp1/p1nppn1p/8/4P3/PNPB1N1P/1P1B1PP1/1R1QR1K1 16 79","1828","4528nAA",
+"1928NAA","5945","2r2rk1/2qbbpp1/p1nppn1p/1p6/4P3/PNPB1N1P/1P1B1PP1/1R1QR1K1 17 80","5758","1009","6052","0503","5850","1828","4528nAA","1928NAA","5244","0917","4446","0615","5144","1710","5960","1118","4426","0343BAA",
+"w26 111 108 ","5345","2r5/2q1bppk/p1b1pn1p/1pB1p3/4P3/PNPr2RP/1PR2PP1/4Q1K1 26 105","4643rAA","1836PAA","2r5/2q1bppk/p1b1pn1p/1pB1p3/4P3/PNPr1PRP/1PR3P1/4Q1K1 26 106","0203","5058","b28 121 116 ","1809","3r4/2q1bppk/p1b1pn1p/1pB1p3/4P3/PNPr1PRP/1P4P1/2R1Q1K1 27 113","2131","2612bAA","1012BAA","4638","3r4/1bq1bppk/p3pn1p/1pB1p3/4P3/PNPr1PRP/1P4P1/2R1Q1K1 28 114","w28 129 124 ","6053","3r4/1bq1bppk/p3pn1p/1pB1p3/4P3/PNPr1PRP/1P4P1/2R1Q1K1 28 114","2633","2131",
+"4638","1011","3r4/1bq1bppk/p3pn1p/1pB1p3/4P3/PNPr1PRP/1P3QP1/2R3K1 28 122","4359","5859rAA","0359RAA","6255","b31 143 136 ","1226BAA","8/1bq1bppk/p3pn1p/1pB1p3/4P3/PNP2PRP/1P3QPK/3r4 30 133","2131","2612bAA","3146RAA","5346nAA","1012BAA","4653","8/1bq2ppk/p3pn1p/1pb1p3/4P3/PNP2PRP/1P3QPK/3r4 31 134","4126bAA","5903","w32 151 148 ","4933",
+"3r4/1bq2ppk/p3pn1p/1pN1p3/4P3/P1P2PRP/1P3QPK/8 32 145","5563","1017","3r4/1bq2ppk/p3pn1p/1pN1p3/1P2P3/P1P2PRP/5QPK/8 32 146","2111","2609bAA","1009NAA","w34 160 157 ","4638","3r4/1q1n1ppk/p3p2p/1p2p3/1P2P3/P1P2PRP/5QPK/8 34 154","5362","0910","3r4/1q1n1ppk/p3p2p/1p2p3/1P2P1R1/P1P2P1P/5QPK/8 34 155","1121","3846","0911","w36 171 166 ","5350","3r4/3q1ppk/p3pn1p/1p2p3/1P2P3/P1P2PRP/5QPK/8 36 163","4032","2532PAA",
+"4537","2136PAA","3r4/3q1ppk/p3pn1p/1p2p3/1P2P3/P1P2PRP/2Q3PK/8 36 164","1151","w37 179 175 ","5057","3r4/5ppk/p3pn1p/1p2p3/1P2P3/P1P2PRP/2Qq2PK/8 37 172","5051qAA","0351QAA","5562","3r4/5ppk/p3pn1p/1p2p3/1P2P3/P1P2PRP/3q2PK/1Q6 37 173","b38 0 182 ","5137","3r4/5ppk/p3pn1p/1p2p3/1P2P3/P1P2PRP/3q2PK/1Q6 37 173","5137","5760","2131"
+	);
+
+	br=new Array(
+	new Array(
+	x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+	)
+	);
+//-->
+</script>
+
+<script SRC="chess.js" LANGUAGE="JavaScript1.1"></script>
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+function doinit() {
+	if (diagram == null) diagram = parent.dia;
+	if (diagram != null) {
+		if ((diagram.dummy1 != null) && (diagram.dummy1 == 1)){
+			dummy2=1;
+			if(timer!=null){
+				clearTimeout(timer);
+				timer=null;}
+			init();
+			var san="0";
+			var sanb="0";
+			if (parent!=null)
+				san=parent.location.href;
+			var ian;
+			ian=san.lastIndexOf('?');
+			if (ian!=-1) {
+				san=san.substring(ian+1, san.length);
+				ian=san.lastIndexOf('_');
+				if ((ian!=-1)&&(diagram.jumpdone!=null)&&(diagram.jumpdone<2)){
+					diagram.jumpdone++;
+					sanb=san.substring(0,ian);
+					san=san.substring(ian+1,san.length);
+					san++;
+					san--;
+					sanb++;
+					if(diagram.jumpdone==1){
+						if((sanb>1)&&(diagram.document.moves0!=null)&&(diagram.document.moves0.database!=null))
+							diagram.gotopage(sanb,1);
+						else if((sanb==1)&&(san>0)){
+							diagram.jumpdone=2;
+							c(0,san);}}
+					else if(diagram.jumpdone==2){
+						if(san>0)
+							c(0,san);}}}
+			return;}}
+	timer=setTimeout("doinit()", 50)}
+
+//-->
+</script>
+
+</head>
+
+<body ONLOAD="doinit()" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#000000" BGCOLOR="#ECECEC">
+<p>
+<font COLOR="#000000">
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+if(idnet1==0){document.write("<table BORDER=0><tr><td>")}
+//-->
+</script>
+<span class="VH"><span STYLE="font:bold  12pt 'Courier New', Arial; color:#000080;">Agustoni, C.. - Wirz, Martin</span><span STYLE="font:  12pt 'Courier New', Arial; color:#000080;"><br>
+SMM Olten - Mutschellen, 24.02.2003</span><span STYLE="font:  12pt 'Courier New', Arial; color:#800000;"><br>
+[Fritz 8 (30s)]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><span class="VC">B51: Sizilianisch (Rossolimo-Variante)<br></span>  <a href="javascript:c(0,1)" ID="l1">1.e4</a>
+ <a href="javascript:c(0,2)" ID="l2">c5</a> <a href="javascript:c(0,3)" ID="l3">2.Sf3</a> <a href="javascript:c(0,4)" ID="l4">Sc6</a>
+ <a href="javascript:c(0,5)" ID="l5">3.Lb5</a> <a href="javascript:c(0,6)" ID="l6">d6</a> <a href="javascript:c(0,7)" ID="l7">4.d4</a>
+ <a href="javascript:c(0,8)" ID="l8">cxd4</a> <a href="javascript:c(0,9)" ID="l9">5.Sxd4</a> <a href="javascript:c(0,10)" ID="l10">Ld7</a> <span class="VC">letzter 
+ Buchzug<br></span> <a href="javascript:c(0,11)" ID="l11">6.c3</a> <a href="javascript:c(0,12)" ID="l12">Sf6</a>
+ <a href="javascript:c(0,13)" ID="l13">7.Sd2</a> <a href="javascript:c(0,14)" ID="l14">e6</a> <span class="VC">Deckt 
+ f5<br></span> <a href="javascript:c(0,15)" ID="l15">8.<nobr>O-O</nobr></a> <a href="javascript:c(0,16)" ID="l16">Le7</a>
+ <a href="javascript:c(0,17)" ID="l17">9.Te1</a> <a href="javascript:c(0,18)" ID="l18"><nobr>O-O</nobr></a> <a href="javascript:c(0,19)" ID="l19">10.Ld3</a>
+ <a href="javascript:c(0,21)" ID="l21">Db6</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,23)" ID="l23">10...Se5</a> <a href="javascript:c(0,24)" ID="l24">11.Lf1</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,27)" ID="l27">11.S2f3</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,29)" ID="l29">11.Sc4</a> <a href="javascript:c(0,30)" ID="l30">Dd8</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,33)" ID="l33">11...Tac8</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,35)" ID="l35">11...Se5</a> <a href="javascript:c(0,36)" ID="l36">12.Lf1</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,39)" ID="l39">12.Tb1</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,41)" ID="l41">12.Sxc6</a> <a href="javascript:c(0,42)" ID="l42">Lxc6</a> <a href="javascript:c(0,43)" ID="l43">13.Sd4</a>
+ <a href="javascript:c(0,44)" ID="l44">a6</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,46)" ID="l46">12...Da5</a> <a href="javascript:c(0,47)" ID="l47">13.a3</a> <span class="VC">Es 
+ geht um b4<br></span> <a href="javascript:c(0,49)" ID="l49">13...h6</a> <span class="VC">Nimmt Einflus 
+ auf g5<br></span>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,51)" ID="l51">13...Se5</a> <a href="javascript:c(0,52)" ID="l52">14.Lg5</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,55)" ID="l55">14.Ld2</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,57)" ID="l57">14.Sxc6</a> <a href="javascript:c(0,58)" ID="l58">Lxc6</a> <a href="javascript:c(0,59)" ID="l59">15.Sd4</a>
+ <a href="javascript:c(0,60)" ID="l60">Ld7</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,63)" ID="l63">14...a6</a> <span class="VC">Punkt b5</span>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,65)" ID="l65">14...Se5</a> <a href="javascript:c(0,66)" ID="l66">15.c4</a>
+ <a href="javascript:c(0,67)" ID="l67">Dc7</a> <a href="javascript:c(0,68)" ID="l68">16.Lf1</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,71)" ID="l71">15.Sb3</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,73)" ID="l73">15.Sxc6!?</a> <a href="javascript:c(0,74)" ID="l74">Lxc6</a>
+ <a href="javascript:c(0,75)" ID="l75">16.Sd4</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,77)" ID="l77">15...Dc7</a> <a href="javascript:c(0,78)" ID="l78">16.h3</a> <span class="VC">Kontrolliert 
+ g4<br></span> <a href="javascript:c(0,80)" ID="l80">16...b5</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,82)" ID="l82">16...Se5</a> <a href="javascript:c(0,83)" ID="l83">17.Sxe5</a>
+ <a href="javascript:c(0,84)" ID="l84">dxe5</a> <a href="javascript:c(0,85)" ID="l85">18.Df3</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,87)" ID="l87">17.Tc1</a> <a href="javascript:c(0,88)" ID="l88">Db7</a> <a href="javascript:c(0,89)" ID="l89">18.Te2</a>
+ <a href="javascript:c(0,90)" ID="l90">Tfd8</a> <a href="javascript:c(0,91)" ID="l91">19.Tc2</a> <a href="javascript:c(0,92)" ID="l92">Se5</a>
+ <a href="javascript:c(0,93)" ID="l93">20.Sxe5</a> <a href="javascript:c(0,94)" ID="l94">dxe5</a> <a href="javascript:c(0,95)" ID="l95">21.Te3</a>
+ <a href="javascript:c(0,96)" ID="l96">Db6</a> <a href="javascript:c(0,97)" ID="l97">22.Tg3</a> <a href="javascript:c(0,98)" ID="l98">Kh7</a>
+ <a href="javascript:c(0,99)" ID="l99">23.Le3</a> <a href="javascript:c(0,100)" ID="l100">Dc7</a> <a href="javascript:c(0,101)" ID="l101">24.De1</a>
+ <a href="javascript:c(0,102)" ID="l102">Lc6</a> <a href="javascript:c(0,103)" ID="l103">25.Lc5</a>
+ <a href="javascript:c(0,104)" ID="l104">Txd3</a> <span class="VC">Beseitigung einer Deckungsfigur: 
+ d3<br></span> <a href="javascript:c(0,106)" ID="l106">26.f3??</a> <span class="VC">und es geht weiter 
+ bergab<br></span>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,108)" ID="l108">26.Txd3</a> <span class="VC">Motiv: Hinlenkung-&gt; d3<br></span> <a href="javascript:c(0,109)" ID="l109">26...Lxe4</a> <span class="VC">Motiv: 
+ Abzugsangriff</span>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,111)" ID="l111">26...Tcd8</a> <a href="javascript:c(0,112)" ID="l112">27.Tc1</a>
+ <a href="javascript:c(0,114)" ID="l114">Lb7</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,116)" ID="l116">27...Sh5</a> <span class="VC">erleichterte Schwarz die Gewinnfuhrung<br></span> <a href="javascript:c(0,117)" ID="l117">28.Lxe7</a>
+ <a href="javascript:c(0,118)" ID="l118">Dxe7</a> <a href="javascript:c(0,119)" ID="l119">29.Tg4</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,122)" ID="l122">28.Df2</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,124)" ID="l124">28.Lb4</a> <span class="VC">nutzt auch nichts mehr<br></span> <a href="javascript:c(0,125)" ID="l125">28...Sh5</a>
+ <a href="javascript:c(0,126)" ID="l126">29.Tg4</a> <a href="javascript:c(0,127)" ID="l127">Dd7</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,129)" ID="l129">28...Td1+</a> <a href="javascript:c(0,130)" ID="l130">29.Txd1</a>
+ <a href="javascript:c(0,131)" ID="l131">Txd1+</a> <a href="javascript:c(0,132)" ID="l132">30.Kh2</a>
+ <a href="javascript:c(0,134)" ID="l134">Lxc5</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,136)" ID="l136">30...Sh5!?</a> <span class="VC">ist genauer<br></span> <a href="javascript:c(0,137)" ID="l137">31.Lxe7</a>
+ <a href="javascript:c(0,138)" ID="l138">Sxg3</a> <a href="javascript:c(0,139)" ID="l139">32.Dxg3</a>
+ <a href="javascript:c(0,140)" ID="l140">Dxe7</a> <a href="javascript:c(0,141)" ID="l141">33.Df2</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,143)" ID="l143">31.Sxc5</a> <a href="javascript:c(0,144)" ID="l144">Td8</a>
+ <a href="javascript:c(0,146)" ID="l146">32.b4</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,148)" ID="l148">32.Kh1</a> <span class="VC">ware gleichermasen fruchtlos<br></span> <a href="javascript:c(0,149)" ID="l149">32...Db6</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,151)" ID="l151">32...Sd7</a> <a href="javascript:c(0,152)" ID="l152">33.Sxb7</a>
+ <a href="javascript:c(0,153)" ID="l153">Dxb7</a> <a href="javascript:c(0,155)" ID="l155">34.Tg4</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,157)" ID="l157">34.Dg1</a> <span class="VC">macht keinen grosen Unterschied<br></span> <a href="javascript:c(0,158)" ID="l158">34...Dc7</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,160)" ID="l160">34...Sf6</a> <a href="javascript:c(0,161)" ID="l161">35.Tg3</a>
+ <a href="javascript:c(0,162)" ID="l162">Dd7</a> <a href="javascript:c(0,164)" ID="l164">36.Dc2</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,166)" ID="l166">36.a4</a> <span class="VC">hilft auch nicht mehr<br></span> <a href="javascript:c(0,167)" ID="l167">36...bxa4</a>
+ <a href="javascript:c(0,168)" ID="l168">37.f4</a> <a href="javascript:c(0,169)" ID="l169">Sxe4</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,171)" ID="l171">36...Dd2</a> <a href="javascript:c(0,173)" ID="l173">37.Db1</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,175)" ID="l175">37.Dxd2</a> <span class="VC">ist noch eine dunne Chance<br></span> <a href="javascript:c(0,176)" ID="l176">37...Txd2</a>
+ <a href="javascript:c(0,177)" ID="l177">38.Kg1</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,180)" ID="l180">37...Df4</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,182)" ID="l182">37...Df4</a> <a href="javascript:c(0,183)" ID="l183">38.De1</a>
+ <a href="javascript:c(0,184)" ID="l184">Sh5</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+
+</span><br><br><span class="VH">0-1</span></td></tr>
+</table>
+</td></tr></table>
+
+</font>
+</p>
+
+<font size=-2><a href="http://www.mailchess.de/pgntojs.html" target=_blank>Erstellt mit PGNtoJS<a></font>
+</body>
+</html>
+

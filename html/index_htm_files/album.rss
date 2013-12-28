@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+
+    <channel>
+        <title>SKO Bilderbogen</title>
+   	<link>.</link>
+        <generator>Jalbum 8.1</generator>
+   		<description></description>
+        
+        
+        <item>
+            <title>b_kamber</title>
+            <link>slides/b_kamber.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/b_kamber.jpg" width="93" height="124"/>
+            <media:content url="slides/b_kamber.jpg" width="384" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/b_kamber.jpg</guid>
+        </item>
+        
+        <item>
+            <title>b_kamber_2</title>
+            <link>slides/b_kamber_2.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/b_kamber_2.jpg" width="93" height="124"/>
+            <media:content url="slides/b_kamber_2.jpg" width="384" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/b_kamber_2.jpg</guid>
+        </item>
+        
+        <item>
+            <title>b_meier</title>
+            <link>slides/b_meier.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/b_meier.jpg" width="93" height="124"/>
+            <media:content url="slides/b_meier.jpg" width="384" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/b_meier.jpg</guid>
+        </item>
+        
+        <item>
+            <title>chmeister</title>
+            <link>slides/chmeister.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/chmeister.jpg" width="124" height="93"/>
+            <media:content url="slides/chmeister.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/chmeister.jpg</guid>
+        </item>
+        
+        <item>
+            <title>gorla_memorial</title>
+            <link>slides/gorla_memorial.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/gorla_memorial.jpg" width="124" height="93"/>
+            <media:content url="slides/gorla_memorial.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/gorla_memorial.jpg</guid>
+        </item>
+        
+        <item>
+            <title>jugend_1</title>
+            <link>slides/jugend_1.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/jugend_1.jpg" width="124" height="93"/>
+            <media:content url="slides/jugend_1.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/jugend_1.jpg</guid>
+        </item>
+        
+        <item>
+            <title>jugendschachcup_03</title>
+            <link>slides/jugendschachcup_03.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/jugendschachcup_03.jpg" width="124" height="93"/>
+            <media:content url="slides/jugendschachcup_03.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/jugendschachcup_03.jpg</guid>
+        </item>
+        
+        <item>
+            <title>junioren</title>
+            <link>slides/junioren.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/junioren.jpg" width="124" height="93"/>
+            <media:content url="slides/junioren.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/junioren.jpg</guid>
+        </item>
+        
+        <item>
+            <title>m_angst</title>
+            <link>slides/m_angst.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/m_angst.jpg" width="124" height="92"/>
+            <media:content url="slides/m_angst.jpg" width="512" height="383"/>
+            
+            
+            <guid isPermaLink="false">slides/m_angst.jpg</guid>
+        </item>
+        
+        <item>
+            <title>p_fischer</title>
+            <link>slides/p_fischer.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/p_fischer.jpg" width="124" height="93"/>
+            <media:content url="slides/p_fischer.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/p_fischer.jpg</guid>
+        </item>
+        
+        <item>
+            <title>p_haenggi</title>
+            <link>slides/p_haenggi.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/p_haenggi.jpg" width="85" height="124"/>
+            <media:content url="slides/p_haenggi.jpg" width="355" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/p_haenggi.jpg</guid>
+        </item>
+        
+        <item>
+            <title>p_niederer</title>
+            <link>slides/p_niederer.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/p_niederer.jpg" width="93" height="124"/>
+            <media:content url="slides/p_niederer.jpg" width="384" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/p_niederer.jpg</guid>
+        </item>
+        
+        <item>
+            <title>sc_pokal</title>
+            <link>slides/sc_pokal.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/sc_pokal.jpg" width="61" height="124"/>
+            <media:content url="slides/sc_pokal.jpg" width="254" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/sc_pokal.jpg</guid>
+        </item>
+        
+        <item>
+            <title>scfinal_2001</title>
+            <link>slides/scfinal_2001.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/scfinal_2001.jpg" width="124" height="93"/>
+            <media:content url="slides/scfinal_2001.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/scfinal_2001.jpg</guid>
+        </item>
+        
+        <item>
+            <title>scfinal_2002</title>
+            <link>slides/scfinal_2002.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/scfinal_2002.jpg" width="124" height="93"/>
+            <media:content url="slides/scfinal_2002.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/scfinal_2002.jpg</guid>
+        </item>
+        
+        <item>
+            <title>w_gubler</title>
+            <link>slides/w_gubler.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/w_gubler.jpg" width="83" height="124"/>
+            <media:content url="slides/w_gubler.jpg" width="344" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/w_gubler.jpg</guid>
+        </item>
+        
+        <item>
+            <title>w_stegmaier</title>
+            <link>slides/w_stegmaier.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/w_stegmaier.jpg" width="93" height="124"/>
+            <media:content url="slides/w_stegmaier.jpg" width="384" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/w_stegmaier.jpg</guid>
+        </item>
+        
+        <item>
+            <title>weihnachtsblitz_2003_1</title>
+            <link>slides/weihnachtsblitz_2003_1.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/weihnachtsblitz_2003_1.jpg" width="93" height="124"/>
+            <media:content url="slides/weihnachtsblitz_2003_1.jpg" width="384" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/weihnachtsblitz_2003_1.jpg</guid>
+        </item>
+        
+        <item>
+            <title>weihnachtsblitz_2003_2</title>
+            <link>slides/weihnachtsblitz_2003_2.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/weihnachtsblitz_2003_2.jpg" width="124" height="93"/>
+            <media:content url="slides/weihnachtsblitz_2003_2.jpg" width="512" height="384"/>
+            
+            
+            <guid isPermaLink="false">slides/weihnachtsblitz_2003_2.jpg</guid>
+        </item>
+        
+        <item>
+            <title>y_peltier</title>
+            <link>slides/y_peltier.html</link>
+            <pubDate>Sat, 24 Jan 2009 16:32:40 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/y_peltier.jpg" width="93" height="124"/>
+            <media:content url="slides/y_peltier.jpg" width="384" height="512"/>
+            
+            
+            <guid isPermaLink="false">slides/y_peltier.jpg</guid>
+        </item>
+        
+    </channel>
+</rss>

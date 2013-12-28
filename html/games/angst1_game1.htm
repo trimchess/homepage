@@ -1,0 +1,141 @@
+<html>
+
+<head>
+<link rel=stylesheet type="text/css" href="angst1.css">
+<script LANGUAGE="JavaScript1.1">
+<!--
+if(top.frames.length==0)location.replace("angst1.htm");
+
+	var x="x";
+	var goback=-1;
+	var goahead=-2;
+	var idx=0;
+	var bidx=0;
+	var lastidx=new Array(0, 0);
+	var lastcolor="#000000";
+	var movebgcol="#F8E1B8";
+	var movecol="#071E47";
+	var bgcolor="#ECECEC";
+	var maxvar=0;
+	var engl=0;
+	var nbgames = 1;
+	var diagram=parent.dia;
+	var timer=null;
+	var dummy2=0;
+	var dummy3=0;
+	if ((navigator.appName=="Netscape")&&(navigator.appVersion.substring(0,1) == "3"))
+	{idnet1=1}else{idnet1=0};
+
+	zg=new Array(
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1026","6245","0118","5135","2635PAA","4535pAA","0816","5844","0310","5742","1220","6143","0621","60626361","0925","5547","0209","4840","0003",
+"5960","0512","5337","1835NAA","4435nAA","1226","6044","2635BAA","4435bAA","1127","3628","2111","4325pAA","1625BAA","4225pAA","1026","2519","0405","3526qAA","1126QAA","4933",
+"0319NAA","2819rAA","2636","3729","b24 53 49 ","3646","5k1r/1b3ppp/3Pp3/3p1P2/1P2n3/P6P/2P3P1/R4RK1 23 46","2028","4032","3619PAA","5k1r/1b3ppp/3Pp3/3p1P2/1P6/P5nP/2P3P1/R4RK1 24 47","2920pAA","4661RAA","5661nAA","1321","4032","0504","3224","0916","3325"
+	);
+
+	br=new Array(
+	new Array(
+	x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+	)
+	);
+//-->
+</script>
+
+<script SRC="chess.js" LANGUAGE="JavaScript1.1"></script>
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+function doinit() {
+	if (diagram == null) diagram = parent.dia;
+	if (diagram != null) {
+		if ((diagram.dummy1 != null) && (diagram.dummy1 == 1)){
+			dummy2=1;
+			if(timer!=null){
+				clearTimeout(timer);
+				timer=null;}
+			init();
+			var san="0";
+			var sanb="0";
+			if (parent!=null)
+				san=parent.location.href;
+			var ian;
+			ian=san.lastIndexOf('?');
+			if (ian!=-1) {
+				san=san.substring(ian+1, san.length);
+				ian=san.lastIndexOf('_');
+				if ((ian!=-1)&&(diagram.jumpdone!=null)&&(diagram.jumpdone<2)){
+					diagram.jumpdone++;
+					sanb=san.substring(0,ian);
+					san=san.substring(ian+1,san.length);
+					san++;
+					san--;
+					sanb++;
+					if(diagram.jumpdone==1){
+						if((sanb>1)&&(diagram.document.moves0!=null)&&(diagram.document.moves0.database!=null))
+							diagram.gotopage(sanb,1);
+						else if((sanb==1)&&(san>0)){
+							diagram.jumpdone=2;
+							c(0,san);}}
+					else if(diagram.jumpdone==2){
+						if(san>0)
+							c(0,san);}}}
+			return;}}
+	timer=setTimeout("doinit()", 50)}
+
+//-->
+</script>
+
+</head>
+
+<body ONLOAD="doinit()" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#000000" BGCOLOR="#ECECEC">
+<p>
+<font COLOR="#000000">
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+if(idnet1==0){document.write("<table BORDER=0><tr><td>")}
+//-->
+</script>
+<span class="VH"><span STYLE="font:bold  12pt 'Courier New', Arial; color:#000080;">H&auml;nggi, Philipp - Angst, Markus</span><span STYLE="font:  12pt 'Courier New', Arial; color:#000080;"><br>
+90'/36+30', 17.04.2003</span><span STYLE="font:  12pt 'Courier New', Arial; color:#800000;"><br>
+[Angst Markus]</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><a href="javascript:c(0,1)" ID="l1">1.e4</a>
+ <a href="javascript:c(0,2)" ID="l2">c5</a> <a href="javascript:c(0,3)" ID="l3">2.Sf3</a> <a href="javascript:c(0,4)" ID="l4">Sc6</a>
+ <a href="javascript:c(0,5)" ID="l5">3.d4</a> <a href="javascript:c(0,6)" ID="l6">cxd4</a> <a href="javascript:c(0,7)" ID="l7">4.Sxd4</a>
+ <a href="javascript:c(0,8)" ID="l8">a6</a> <a href="javascript:c(0,9)" ID="l9">5.Le3</a> <a href="javascript:c(0,10)" ID="l10">Dc7</a>
+ <a href="javascript:c(0,11)" ID="l11">6.Sc3</a> <a href="javascript:c(0,12)" ID="l12">e6</a> <a href="javascript:c(0,13)" ID="l13">7.Ld3</a>
+ <a href="javascript:c(0,14)" ID="l14">Sf6</a> <a href="javascript:c(0,15)" ID="l15">8.<nobr>O-O</nobr></a> <a href="javascript:c(0,16)" ID="l16">b5</a>
+ <a href="javascript:c(0,17)" ID="l17">9.h3</a> <a href="javascript:c(0,18)" ID="l18">Lb7</a> <a href="javascript:c(0,19)" ID="l19">10.a3</a>
+ <a href="javascript:c(0,20)" ID="l20">Td8</a> <a href="javascript:c(0,21)" ID="l21">11.De1</a> <a href="javascript:c(0,22)" ID="l22">Le7</a>
+ <a href="javascript:c(0,23)" ID="l23">12.f4</a> <a href="javascript:c(0,24)" ID="l24">Sxd4</a> <a href="javascript:c(0,25)" ID="l25">13.Lxd4</a>
+ <a href="javascript:c(0,26)" ID="l26">Lc5</a> <a href="javascript:c(0,27)" ID="l27">14.De3</a> <a href="javascript:c(0,28)" ID="l28">Lxd4</a>
+ <a href="javascript:c(0,29)" ID="l29">15.Dxd4</a> <a href="javascript:c(0,30)" ID="l30">d5</a> <a href="javascript:c(0,31)" ID="l31">16.e5</a>
+ <a href="javascript:c(0,32)" ID="l32">Sd7</a> <a href="javascript:c(0,33)" ID="l33">17.Lxb5</a> <a href="javascript:c(0,34)" ID="l34">axb5</a>
+ <a href="javascript:c(0,35)" ID="l35">18.Sxb5</a> <a href="javascript:c(0,36)" ID="l36">Dc5</a> <a href="javascript:c(0,37)" ID="l37">19.Sd6+</a>
+ <a href="javascript:c(0,38)" ID="l38">Kf8</a> <a href="javascript:c(0,39)" ID="l39">20.Dxc5</a> <a href="javascript:c(0,40)" ID="l40">Sxc5</a>
+ <a href="javascript:c(0,41)" ID="l41">21.b4</a> <a href="javascript:c(0,42)" ID="l42">Txd6</a> <a href="javascript:c(0,43)" ID="l43">22.exd6</a>
+ <a href="javascript:c(0,44)" ID="l44">Se4</a> <a href="javascript:c(0,45)" ID="l45">23.f5</a> <a href="javascript:c(0,47)" ID="l47">Sg3</a>
+  </span></td></tr>
+<tr><td WIDTH=10pt></td><td>
+<span class="V1">[<a href="javascript:c(0,49)" ID="l49">23...e5</a> <a href="javascript:c(0,50)" ID="l50">24.a4</a>
+ <a href="javascript:c(0,51)" ID="l51">Sxd6</a>]</span></td></tr>
+<tr><td COLSPAN=2>
+<span class="V0">
+<a href="javascript:c(0,53)" ID="l53">24.fxe6</a> <a href="javascript:c(0,54)" ID="l54">Sxf1</a>
+ <a href="javascript:c(0,55)" ID="l55">25.Txf1</a> <a href="javascript:c(0,56)" ID="l56">f6</a> <a href="javascript:c(0,57)" ID="l57">26.a4</a>
+ <a href="javascript:c(0,58)" ID="l58">Ke8</a> <a href="javascript:c(0,59)" ID="l59">27.a5</a> <a href="javascript:c(0,60)" ID="l60">La6</a>
+ <a href="javascript:c(0,61)" ID="l61">28.b5</a>
+</span><br><br><span class="VH">1-0</span></td></tr>
+</table>
+</td></tr></table>
+
+</font>
+</p>
+
+<font size=-2><a href="http://www.mailchess.de/pgntojs.html" target=_blank>Erstellt mit PGNtoJS<a></font>
+</body>
+</html>
+

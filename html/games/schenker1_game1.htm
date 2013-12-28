@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<link rel=stylesheet type="text/css" href="schenker1.css">
+<script LANGUAGE="JavaScript1.1">
+<!--
+if(top.frames.length==0)location.replace("schenker1.htm");
+
+	var x="x";
+	var goback=-1;
+	var goahead=-2;
+	var idx=0;
+	var bidx=0;
+	var lastidx=new Array(0, 0);
+	var lastcolor="#000000";
+	var movebgcol="#F8E1B8";
+	var movecol="#071E47";
+	var bgcolor="#ECECEC";
+	var maxvar=0;
+	var engl=1;
+	var nbgames = 1;
+	var diagram=parent.dia;
+	var timer=null;
+	var dummy2=0;
+	var dummy3=0;
+
+	zg=new Array(
+"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR 1 x","5236","1026","4933","2633PAA","4840","1127","3627pAA","0327PAA","6245","1228","4033pAA","0533PAA","5042","3312","5740","0118","4025","2703","5135","2836",
+"4562","0621","3527","1226","5837","04060705","2510","1812","1000rAA","1227PAA","3746","3644","5345","2131","6252","0229","0010","2733","5235","2635NAA","1025",
+"3350","6052","0327","2519","3146BAA","5546nAA","2719NAA","6331","2922","3126","5056RAA","5935bAA","1916","4234","1648","5259","4850"
+	);
+
+	br=new Array(
+	new Array(
+	x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x
+	)
+	);
+//-->
+</script>
+
+<script SRC="chess1.js" LANGUAGE="JavaScript1.1"></script>
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+function doinit() {
+if (diagram == null) diagram = parent.dia;
+if (diagram != null) {
+if ((diagram.dummy1 != null) && (diagram.dummy1 == 1)){
+dummy2=1;
+if(timer!=null){
+clearTimeout(timer);
+timer=null;}
+init();
+var san="0";
+var sanb="0";
+if (parent!=null)
+san=parent.location.href;
+var ian;
+ian=san.lastIndexOf('?');
+if (ian!=-1) {
+san=san.substring(ian+1, san.length);
+ian=san.lastIndexOf('_');
+if ((ian!=-1)&&(diagram.jumpdone!=null)&&(diagram.jumpdone<2)){
+diagram.jumpdone++;
+sanb=san.substring(0,ian);
+san=san.substring(ian+1,san.length);
+san++;san--;sanb++;
+if(diagram.jumpdone==1){
+if((sanb>1)&&(diagram.document.moves0!=null)&&(diagram.document.moves0.database!=null))
+diagram.gotopage(sanb,1);
+else if((sanb==1)&&(san>0)){
+diagram.jumpdone=2;
+c(0,san);}}
+else if(diagram.jumpdone==2){
+if(san>0)
+c(0,san);}}}
+return;}}
+timer=setTimeout("doinit()", 50)}
+
+//-->
+</script>
+
+</head>
+
+<body ONLOAD="doinit()" TEXT="#000000" LINK="#000000" VLINK="#000000" ALINK="#000000" BGCOLOR="#ECECEC" ONKEYDOWN="handleKey(window.event.keyCode)">
+<p>
+<font COLOR="#000000">
+
+<script LANGUAGE="JavaScript1.1">
+<!--
+document.write("<table BORDER=0><tr><td>")
+//-->
+</script>
+<span class="VH"><span class="hPlayers">Melkumjanz, Nikolay (2256) - Schenker, Roberto (2129)</span><span class="hEvent"><br>
+Hilton Open 2013 (Basel), 01/02/2013</span></span><br><br>
+
+
+<table BORDER=0>
+<tr><td COLSPAN=2>
+<span class="V0"><a href="javascript:c(0,1)" ID="l1">1.e4</a> <a href="javascript:c(0,2)" ID="l2">c5</a> <a href="javascript:c(0,3)" ID="l3">2.b4</a>
+ <a href="javascript:c(0,4)" ID="l4">cxb4</a> <a href="javascript:c(0,5)" ID="l5">3.a3</a> <a href="javascript:c(0,6)" ID="l6">d5</a>
+ <a href="javascript:c(0,7)" ID="l7">4.exd5</a> <a href="javascript:c(0,8)" ID="l8">Qxd5</a> <a href="javascript:c(0,9)" ID="l9">5.Nf3</a>
+ <a href="javascript:c(0,10)" ID="l10">e5</a> <a href="javascript:c(0,11)" ID="l11">6.axb4</a> <a href="javascript:c(0,12)" ID="l12">Bxb4</a>
+ <a href="javascript:c(0,13)" ID="l13">7.c3</a> <a href="javascript:c(0,14)" ID="l14">Be7</a> <a href="javascript:c(0,15)" ID="l15">8.Na3</a>
+ <a href="javascript:c(0,16)" ID="l16">Nc6</a> <a href="javascript:c(0,17)" ID="l17">9.Nb5</a> <a href="javascript:c(0,18)" ID="l18">Qd8</a>
+ <a href="javascript:c(0,19)" ID="l19">10.d4</a> <a href="javascript:c(0,20)" ID="l20">e4</a> <a href="javascript:c(0,21)" ID="l21">11.Ng1</a>
+ <a href="javascript:c(0,22)" ID="l22">Nf6</a> <a href="javascript:c(0,23)" ID="l23">12.d5</a> <a href="javascript:c(0,24)" ID="l24">Bc5</a>
+ <a href="javascript:c(0,25)" ID="l25">13.Bf4</a> <a href="javascript:c(0,26)" ID="l26"><nobr>O-O</nobr></a> <a href="javascript:c(0,27)" ID="l27">14.Nc7</a>
+ <a href="javascript:c(0,28)" ID="l28">Ne7</a> <a href="javascript:c(0,29)" ID="l29">15.Nxa8</a> <a href="javascript:c(0,30)" ID="l30">Nexd5</a>
+ <a href="javascript:c(0,31)" ID="l31">16.Bg3</a> <a href="javascript:c(0,32)" ID="l32">e3</a> <a href="javascript:c(0,33)" ID="l33">17.f3</a>
+ <a href="javascript:c(0,34)" ID="l34">Nh5</a> <a href="javascript:c(0,35)" ID="l35">18.Ne2</a> <a href="javascript:c(0,36)" ID="l36">Bf5</a>
+ <a href="javascript:c(0,37)" ID="l37">19.Nc7</a> <a href="javascript:c(0,38)" ID="l38">Nb4</a> <a href="javascript:c(0,39)" ID="l39">20.Nd4</a>
+ <a href="javascript:c(0,40)" ID="l40">Bxd4</a> <a href="javascript:c(0,41)" ID="l41">21.Nb5</a> <a href="javascript:c(0,42)" ID="l42">Nc2+</a>
+ <a href="javascript:c(0,43)" ID="l43">22.Ke2</a> <a href="javascript:c(0,44)" ID="l44">Qd5</a> <a href="javascript:c(0,45)" ID="l45">23.Nd6</a>
+ <a href="javascript:c(0,46)" ID="l46">Nxg3+</a> <a href="javascript:c(0,47)" ID="l47">24.hxg3</a>
+ <a href="javascript:c(0,48)" ID="l48">Qxd6</a> <a href="javascript:c(0,49)" ID="l49">25.Rh5</a> <a href="javascript:c(0,50)" ID="l50">Bg6</a>
+ <a href="javascript:c(0,51)" ID="l51">26.Rc5</a> <a href="javascript:c(0,52)" ID="l52">Nxa1</a> <a href="javascript:c(0,53)" ID="l53">27.Qxd4</a>
+ <a href="javascript:c(0,54)" ID="l54">Qa6+</a> <a href="javascript:c(0,55)" ID="l55">28.c4</a> <a href="javascript:c(0,56)" ID="l56">Qa2+</a>
+ <a href="javascript:c(0,57)" ID="l57">29.Kd1</a> <a href="javascript:c(0,58)" ID="l58">Qc2+</a> 
+</span><br><br><span class="VH">0-1</span></td></tr>
+</table>
+</td></tr></table>
+
+</font>
+</p>
+
+<font size=-2><a href="http://www.mailchess.de/pgntojse.html" target=_blank>Created with PGNtoJS</a></font>
+</body>
+</html>

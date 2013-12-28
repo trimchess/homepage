@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* Index styles */
+
+.folder img {
+	padding: 7px 5px;
+}
+
+.thumb-container {
+	margin: 5px 10px 5px 0;	
+	text-align: center;
+}
+
+.icon-container {
+	margin: 5px 10px 5px 0;	
+}
+
+.icon-container img.button {
+	margin-bottom: 5px;
+}
+
+.icon-container .label {
+	position: static;
+	text-align: center;
+	width: 100px;
+}

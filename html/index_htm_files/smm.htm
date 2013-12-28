@@ -1,0 +1,319 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Schach</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Tms Nordic";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Tms Nordic","serif";
+	color:windowtext;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	color:windowtext;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:0cm;
+	margin-right:-184.3pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	color:windowtext;
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Arial","sans-serif";
+	color:windowtext;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Tms Nordic","serif";
+	color:windowtext;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{mso-style-link:"Aufzählungszeichen Zchn";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	font-size:10.0pt;
+	font-family:"Tms Nordic","serif";
+	color:windowtext;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";
+	color:windowtext;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	color:windowtext;}
+p.xl44, li.xl44, div.xl44
+	{mso-style-name:xl44;
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:windowtext;
+	font-weight:bold;}
+p.BodyText21, li.BodyText21, div.BodyText21
+	{mso-style-name:"Body Text 21";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:windowtext;}
+p.BodyText31, li.BodyText31, div.BodyText31
+	{mso-style-name:"Body Text 31";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";
+	color:windowtext;
+	font-style:italic;}
+span.AufzhlungszeichenZchn
+	{mso-style-name:"Aufzählungszeichen Zchn";
+	mso-style-link:Aufzählungszeichen;
+	font-family:"Tms Nordic","serif";}
+p.BodyText22, li.BodyText22, div.BodyText22
+	{mso-style-name:"Body Text 22";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+span.z-FormularbeginnZchn
+	{mso-style-name:"z-Formularbeginn Zchn";
+	mso-style-link:z-Formularbeginn;
+	font-family:"Arial","sans-serif";
+	color:black;
+	display:none;}
+span.z-FormularendeZchn
+	{mso-style-name:"z-Formularende Zchn";
+	mso-style-link:z-Formularende;
+	font-family:"Arial","sans-serif";
+	color:black;
+	display:none;}
+ /* Page Definitions */
+ @page Section1
+	{size:21.0cm 842.0pt;
+	margin:70.9pt 8.0cm 70.9pt 70.9pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#548DD4" lang=DE-CH link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoBodyText><b>Schach</b></p>
+
+<p class=MsoBodyText><b>&nbsp;</b></p>
+
+<p class=MsoBodyText><b>SMM: drei von vier SKO-Teams gewannen</b></p>
+
+<p class=MsoBodyText>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Der
+Schachklub Olten setzte seinen Siegeszug in der Schweizerischen
+Mannschaftsmeisterschaft (SMM) auch in der 3. Runde fort. Drei der vier SKO-Teams
+blieben siegreich und verteidigten damit ihre Position an der Tabellenspitze. Allerdings
+kam Absteiger Olten I in der 2. Liga gegen das noch punktelose Kirchberg nur zu
+einem knappen 3½:2½-Erfolg (Siege für Matthias Kiese, Robin Angst und Beat
+Meier, Remis für David Monnerat). Das in der gleichen Liga spielende Olten II musste
+sich hingegen dem klar stärkeren Reichenstein III 2:4 geschlagen geben
+(einziger Sieg von Walter Stegmaier, Remis von Catherine Thürig und Paul
+Niederer).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Wie
+das Fanionteam liegen auch Olten III (4½:1½-Sieg im Derby gegen Oftringen) in
+der 3. Liga und Olten IV (3½:2½-Sieg gegen Muttenz) in der 4. Liga in ihren
+Gruppen weiterhin in Führung. Mit vier Punkten Vorsprung auf das
+drittplatzierte Muttenz braucht Olten IV nur noch einen Punkt aus zwei Partien,
+um den direkten Aufstieg in die 3. Liga zu schaffen.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=xl44 style='margin:0cm;margin-bottom:.0001pt'><i><span
+style='font-size:14.0pt;font-weight:normal'>MA</span></i></p>
+
+<p class=xl44 style='margin:0cm;margin-bottom:.0001pt'><span style='font-size:
+14.0pt;font-weight:normal'>&nbsp;</span></p>
+
+<h1 style='margin:0cm;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:"Times New Roman","serif"'>Schweizerische Mannschaftsmeisterschaft
+(SMM). 3. Runde. 2. Liga. Nordwest I:</span><span style='font-size:14.0pt;
+font-family:"Times New Roman","serif";font-weight:normal'> Kirchberg - Olten 2½:3½
+(</span><span lang=DE style='font-size:14.0pt;font-family:"Times New Roman","serif";
+font-weight:normal'>Martig - Kiese 0:1, Marti - Monnerat ½:½, Heniche - A. Kamber
+1:0, Tanner - R. Angst 0:1, Schüpbach - Andjelkovic 1:0, Keller - Meier 0:1</span><span
+style='font-size:14.0pt;font-family:"Times New Roman","serif";font-weight:normal'>).
+Luzern III - Baden II 3:3. Bern III - Trubschachen II 2½:3½. Schwarz-Weiss Bern
+III - Nimzowitsch Zürich III 2½:3½.</span></h1>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Rangliste
+nach 3 Runden:</span></i></b><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+</span></b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>1.
+Olten 6 (12). 2. Baden II 5 (12). 3. Trubschachen II und Nimzowitsch III je 4 (9).
+5. Luzern III 3 (9½). 6. Bern III 2 (8). 7. Kirchberg 0 (6½). 8. Schwarz-Weiss
+III 0 (6).</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Zentral
+II:</span></b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+</span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Reichenstein
+III - </span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Olten
+II 4:2 (Malachowski - </span><span style='font-size:14.0pt;font-family:"Times New Roman","serif";
+color:black'>Thürig ½:½, Bräunlin - M. Angst 1:0, Meier - J. Angst 1:0, Finck -
+Niederer ½:½, Gautier - Born 1:0, Ulmer - Stegmaier 0:1</span><span
+style='font-size:14.0pt;font-family:"Times New Roman","serif"'>). </span><span
+style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Baden III - Riehen
+IV 2½:3½. Roche - Birseck II 3:3. Emmenbrücke - </span><span style='font-size:
+14.0pt;font-family:"Times New Roman","serif"'>Therwil II 2</span><span
+style='font-size:14.0pt;font-family:"Times New Roman","serif"'>:4.</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Rangliste
+nach 3 Runden:</span></i></b><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+</span></b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>1.
+Therwil II 5 (11½). 2. </span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Riehen
+IV 5 (10). 3. Reichenstein III 4 (10½). 4. Roche 4 (9½). 5. </span><span
+style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Olten II 3 (9). </span><span
+style='font-size:14.0pt;font-family:"Times New Roman","serif"'>6. Birseck II 3
+(8½). 7. Baden III 0 (7). 8. Emmenbrücke 0 (6).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>3.
+Liga:</span></b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+Oftringen - Olten III 1½:4½ (</span><span style='font-size:14.0pt;font-family:
+"Times New Roman","serif";color:black'>Furginé - Lang 0:1, Schürmann - Thomi
+1:0, Weitzel - Bosco 0:1, Knutti - Schmidt ½:½, Plüss - J. Schmid 0:1, Nützi -
+P. Schmid 0:1</span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>).
+Rüti - Gligoric Zürich III 4½:1½. Wollishofen VI - Rapperswil-Jona II 2½:3½. Réti
+Zürich IV -  Zürich V 2½:3½.</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Rangliste
+nach 3 Runden:</span></i></b><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+</span></b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>1.
+Olten III</span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+6 (12½). 2. </span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Zürich
+V 6 (11). 3. Réti IV 4 (10). 4. Rapperswil-Jona II 4 (9½). 5. Wollishofen VI 2
+(10½). 6. </span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Rüti
+2 (9). 7. </span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Oftringen
+0 (6½). </span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>8.
+</span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Gligoric
+III 0 (3).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>4.
+Liga. Nordwest III:</span></b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+Olten IV - Muttenz 3½:2½ (</span><span style='font-size:14.0pt;font-family:
+"Times New Roman","serif";color:black'>Donghi - Frei 1:0, Fischer - Brunella 0:1,
+Henzirohs - Rudin 1:0, D‘Onofrio - Bonauer ½:½, Jäggi - Häner 1:0, T. Ackermann
+- Gerber 0:1</span><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman","serif"'>).
+</span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Frenkendorf
+- Rössli Reinach/BL III 5:1. Pfeffingen - Therwil IV 4:2.</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>Rangliste
+nach 3 Runden:</span></i></b><b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+</span></b><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>1.
+Olten IV 6 (12½).</span><span style='font-size:14.0pt;font-family:"Times New Roman","serif"'>
+2. Pfeffingen 6 (11½). 3. Muttenz 2 (10). 4. Frenkendorf 2 (8). 5. Therwil IV 2
+(6½). 6. Rössli Reinach/BL III 0 (5½).</span></p>
+
+</div>
+
+</body>
+
+</html>
