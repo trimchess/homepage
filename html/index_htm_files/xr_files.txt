@@ -74,7 +74,6 @@ index_htm_files/1104.png
 index_htm_files/1106.png
 index_htm_files/1198.jpg
 index_htm_files/1211.png
-index_htm_files/1226.png
-index_htm_files/1227.png
-index_htm_files/1228.jpg
-index_htm_files/1229.jpg
+index_htm_files/1234.png
+index_htm_files/1235.png
+index_htm_files/1236.jpg
