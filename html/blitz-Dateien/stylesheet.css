@@ -49,18 +49,25 @@ td
 	mso-rotate:0;}
 .xl65
 	{mso-style-parent:style0;
-	text-align:left;}
-.xl66
-	{mso-style-parent:style0;
-	font-size:22.0pt;
+	font-size:20.0pt;
 	font-weight:700;
 	font-family:Arial, sans-serif;
-	mso-font-charset:0;}
-.xl67
+	mso-font-charset:0;
+	vertical-align:top;}
+.xl66
 	{mso-style-parent:style0;
-	text-align:right;}
-.xl68
+	vertical-align:top;}
+.xl67
 	{mso-style-parent:style0;
 	font-family:Arial, sans-serif;
 	mso-font-charset:0;
-	text-align:right;}
+	text-align:right;
+	vertical-align:top;}
+.xl68
+	{mso-style-parent:style0;
+	text-align:right;
+	vertical-align:top;}
+.xl69
+	{mso-style-parent:style0;
+	text-align:left;
+	vertical-align:top;}
