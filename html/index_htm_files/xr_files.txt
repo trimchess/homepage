@@ -75,3 +75,5 @@ index_htm_files/1106.png
 index_htm_files/1241.jpg
 index_htm_files/1251.png
 index_htm_files/1252.png
+index_htm_files/symbol.ttf
+index_htm_files/symbol.eot
